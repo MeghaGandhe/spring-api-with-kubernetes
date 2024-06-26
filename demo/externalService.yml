@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-api-service-external
+  namespace: ingress-nginx
+spec:
+  type: ExternalName
+  externalName: spring-api-service.learning.svc.cluster.local

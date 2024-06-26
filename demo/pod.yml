@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-api
+  namespace: learning
+spec:
+  containers:
+    - name: spring-api-with-kubernetes
+      image: spring-api-with-kubernetes:spring-docker

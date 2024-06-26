@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-api-deployment
+  namespace: learning
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spring-api
+  template:
+    metadata:
+      labels:
+        app: spring-api
+    spec:
+      containers:
+      - name: spring-api-with-kubernetes
+        image: spring-api-with-kubernetes:spring-docker
